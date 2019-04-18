@@ -1,0 +1,17 @@
+
+<div class="card mb-3" style="max-width: 750px; margin:auto;" ng-repeat="item in namelist | filter: searchText |  limitTo:rowLimits.value  | orderBy:sortColumn">
+    <div class="row no-gutters col-md-12">
+      <div class="col-md-4">
+        <img ng-src="{{ item.imagebook }}" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.productname }}</h5>
+          <p class="card-text">${{ item.price }}</p>
+          <div class="stars-outer">
+            <div class="stars-inner" ng-style="{ 'width': rating(item.rating) }"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
